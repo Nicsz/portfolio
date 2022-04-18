@@ -1,0 +1,604 @@
+*
+  box-sizing: border-box
+
+html
+  scroll-behavior: smooth
+
+body
+  font-family: 'Raleway', sans-serif
+  // background-color: #000
+
+#overlay
+  // position: fixed
+  // display: block
+  // width: 100%
+  // height: 100%
+  // top: 0
+  // left: 0
+  // right: 0
+  // bottom: 0
+  // background-color: rgba(0,0,0,0.25)
+  // z-index: 2
+  // background-color: rgba(248, 247, 216, 0.7)
+  // position: absolute
+  // top: 0
+  // left: 0
+  // width: 100%
+  // height: 100%
+
+.bg
+  background: url(/assets/images/bg.png)
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  position: fixed
+  width: 100%
+  height: 500px
+
+  top: 0
+
+  z-index: 1
+
+   -webkit-transition: all 5s ease-out
+  -moz-transition: all 5s ease-out
+  -o-transition: all 5s ease-out
+  transition: all 5s ease-out
+
+  &:hover, .bg:focus
+    background: url(/assets/images/bg.png)
+    background-size: 105% 105%
+    background-position: center
+  &::after
+    content: ' '
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: rgba(0,0,0,.5)
+
+.pos
+  top: inherit
+  bottom: 0
+
+.container
+  max-width: 1140px
+  margin-right: auto
+  margin-left: auto
+  &-fluid
+    width: 100%
+
+.row
+  display: flex
+  flex-wrap: wrap
+
+// HEADER
+.header
+  display: block
+  // background: url("/assets/images/bg.png")
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  position: relative
+
+  -webkit-transition: all 5s ease-out
+  -moz-transition: all 5s ease-out
+  -o-transition: all 5s ease-out
+  transition: all 5s ease-out
+
+  &:hover, .header:focus
+    background: url(/assets/images/bg.png)
+    background-size: 105% 105%
+    background-position: center
+  &::after
+    content: ' '
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: rgba(0,0,0,.5)
+  &__content
+    height: 500px
+    & #home:hover
+      background-size: 100%
+    &-inner
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      height: 500px
+
+.logo
+  height: 60px
+  &-link
+    position: absolute
+    z-index: 1
+    //background: #FFFAF0
+    //background: rgba(0,0,0,0.7)
+    background: rgba(3,3,3,0.7)
+    top: 0
+    left: 0
+    padding: 20px
+
+.title
+  font-size: 36px
+  font-weight: 200
+  letter-spacing: 0.5625em
+  color: #FFFAF0
+  text-align: center
+  & span
+    position: relative
+    z-index: 1
+
+.menu
+  display: flex
+  justify-content: center
+  
+  position: static
+  z-index: inherit
+  &-right
+    width: 100%
+    &__list
+      display: flex
+      justify-content: space-around
+      &-item      
+        position: relative
+        z-index: 1
+    &__link
+      font-size: 22px
+      font-weight: 600
+      letter-spacing: 0.5625em
+      color: #FFFFF0
+      text-decoration: none
+      position: relative
+      &::after
+        content: ' '
+        border-bottom: 2px solid #C4C4C4
+        display: block
+        position: absolute
+        right: 12px
+        bottom: -10px
+        left: 0
+
+        opacity: 0
+        
+        -webkit-transition: opacity .5s ease-out
+        -moz-transition: opacity .5s ease-out
+        -o-transition: opacity .5s ease-out
+        transition: opacity .5s ease-out
+      &--active::after
+        content: ' '
+        border-bottom: 2px solid #C4C4C4
+        display: block
+        position: absolute
+        right: 12px
+        bottom: -10px
+        left: 0
+  
+        opacity: 1
+      &:hover::after
+        content: ' '
+        border-bottom: 2px solid #C4C4C4
+        display: block
+        position: absolute
+        right: 12px
+        bottom: -10px
+        left: 0
+
+        opacity: 1
+//END
+
+// SECTION Portfolio
+.portfolio
+  background-color: #F2F3F4
+  padding-top: 50px
+  position: relative
+  z-index: 2
+  & .menu
+    width: 100%
+    &__list
+      display: flex
+      justify-content: center
+      overflow: hidden
+      &-item
+        display: flex
+        align-items: center
+      & .pad
+        padding: 2px 25px
+    &__link
+      display: block
+      font-size: 12px
+      font-weight: 600
+      letter-spacing: 0.5625em
+      color: #333333
+      padding-top: 10px
+      padding-bottom: 10px
+      padding-left: 15px
+      padding-right: 10px
+      text-decoration: none
+
+      outline: 2px solid transparent
+      -moz-transition: all .5s ease-out
+      -o-transition: all .5s ease-out
+      -webkit-transition: all .5s ease-out
+      transition: all .5s ease-out
+      &--active
+        outline: 2px solid #333
+      &:hover
+        color: #333333
+        outline: 2px solid #333
+  &__items
+    padding-top: 50px
+    padding-bottom: 50px
+  &__item
+    height: 380px
+    position: relative
+    &-1
+      background: url(/portfolio/assets/images/portfolio/screenshots/dermaviduals.png)
+      background-size: cover
+      background-position-x: center
+    &-2
+      background: url(/portfolio/assets/images/portfolio/screenshots/wedding-ceremony.png)
+      background-size: cover
+    &-3
+      background: url(/portfolio/assets/images/portfolio/screenshots/inst_retro_promo.png)
+      background-size: cover
+    &-4
+      background: url(/portfolio/assets/images/portfolio/screenshots/video-clip-1.png)
+      background-size: cover
+    &-5
+      background: url(/portfolio/assets/images/portfolio/photos/ps-retouch-1.png)
+      background-size: cover      
+      background-position-x: center
+    &-6
+      background: url(/portfolio/assets/images/portfolio/photos/ps-bg-remove-white.png)
+      background-size: cover
+      background-position-y: center
+    & .overlay
+      position: absolute
+      top: 0 
+      right: 0 
+      bottom: 0 
+      left: 0
+      overflow: hidden
+      height: 100%
+      width: 100%
+      background: transparent
+
+      -moz-transition: all .5s ease-out
+      -o-transition: all .5s ease-out
+      -webkit-transition: all .5s ease-out
+      transition: all .5s ease-out
+      &__icons
+        display: flex
+        justify-content: center
+        align-items: center
+
+        height: 100%
+
+        opacity: 0
+        
+        -moz-transition: all .5s ease-out
+        -o-transition: all .5s ease-out
+        -webkit-transition: all .5s ease-out
+        transition: all .5s ease-out
+        &-link
+          margin: 10px
+        & a
+          cursor: pointer
+        & i
+          color: #333
+          background: #F2F3F4
+          border-radius: 50%
+          padding: 15px
+          opacity: 0.95
+          &:hover
+            padding: 18px
+            -moz-transition: all .5s ease-out
+            -o-transition: all .5s ease-out
+            -webkit-transition: all .5s ease-out
+            transition: all .5s ease-out
+      &__text
+        opacity: 0
+        color: white
+        position: absolute
+        bottom: 0
+        width: 100%
+        margin-left: 30px
+        margin-bottom: 20px
+      &__title
+        font-size: 16px
+        font-weight: 700
+        letter-spacing: 1.2px
+        margin-bottom: 20px
+      &__skill
+        display: flex
+        &-title
+          font-size: 12px
+          font-weight: 700
+          letter-spacing: 1.2px
+          margin-bottom: 10px
+        &-list
+          display: flex
+          font-size: 12px
+          font-weight: 700
+          letter-spacing: 1.2px
+          margin-bottom: 10px
+          position: relative
+          &:first-child
+            .overlay__skill-item:last-child:after
+              content: ','
+          &:last-child
+            .overlay__skill-item:last-child:after
+              content: '.'  
+        &-item
+          margin-left: 5px
+          &:not(:last-child):after
+            content: ','
+        &-list
+      &:hover
+        background: rgba(0,0,0,0.7)
+      &:hover .overlay__icons
+        opacity: 1
+        -moz-transition: all .5s ease-out
+        -o-transition: all .5s ease-out
+        -webkit-transition: all .5s ease-out
+        transition: all .5s ease-out
+      &:hover .overlay__text
+        opacity: 1
+        -moz-transition: all .5s ease-out
+        -o-transition: all .5s ease-out
+        -webkit-transition: all .5s ease-out
+        transition: all .5s ease-out
+    &-img
+      height: 100% 
+      width: 100%
+
+  &__button
+    display: flex
+    justify-content: center
+    &-link
+      display: block
+      font-size: 12px
+      font-weight: 600
+      letter-spacing: 0.5625em
+      background-color: #333
+      color: #fff
+
+      padding-top: 15px
+      padding-bottom: 15px
+      padding-left: 25px
+      padding-right: 20px
+
+      border: 2px solid #333
+      text-decoration: none
+
+      -moz-transition: all .5s ease-out
+      -o-transition: all .5s ease-out
+      -webkit-transition: all .5s ease-out
+      transition: all .5s ease-out
+      
+      -webkit-animation: pulse 1.5s infinite
+      -moz-animation: pulse 1.5s infinite
+      -ms-animation: pulse 1.5s infinite
+      animation: pulse 1.5s infinite
+      &:hover
+        background-color: #F2F3F4
+        color: #333
+
+        -webkit-animation: none
+        -moz-animation: none
+        -ms-animation: none
+        animation: none
+
+@-webkit-keyframes pulse
+  0%
+    transform: scale(.95)
+  
+  50%
+    transform: scale(1)
+  
+  100%
+    transform: scale(.95)
+
+@-moz-keyframes pulse
+  0%
+    transform: scale(.95)
+  
+  50%
+    transform: scale(1)
+  
+  100%
+    transform: scale(.95)
+
+@-ms-keyframes pulse
+  0%
+    transform: scale(.95)
+  
+  50%
+    transform: scale(1)
+  
+  100%
+    transform: scale(.95)
+
+@keyframes pulse
+  0%
+    transform: scale(.98)
+  
+  50%
+    transform: scale(1)
+  
+  100%
+    transform: scale(.98)
+//END
+
+// SECTION About  
+.about
+  background-color: #F2F3F4
+  padding-top: 50px
+  padding-bottom: 50px
+  position: relative
+  z-index: 2
+  &__bg
+    // background-image: url("../assets/images/about.png")
+    // background-image: url("../assets/videos/bg.mp4")
+    // background-size: cover
+    // background-repeat: no-repeat
+    width: 100%
+  &__detail
+    margin: 0 20px
+    background-color: #F2F3F4
+  &__title
+    font-size: 34px
+    font-weight: 700
+    letter-spacing: 0.1125em
+    color: #000
+
+  &__description
+    font-size: 16px
+    font-weight: 600
+    margin-top: 25px
+    line-height: 1.5
+    color: #333
+    &-1
+      font-size: 22px
+      font-weight: 600
+      letter-spacing: 1px
+      margin-bottom: 20px
+    &-2
+      font-family: cursive
+      font-size: 20px
+      font-weight: 400
+      letter-spacing: 1px
+    &-3
+      font-size: 22px
+      font-weight: 600
+      letter-spacing: 1px
+      margin-top: 20px
+    &-list
+      display: flex
+      flex-direction: column
+    &-item
+      display: flex
+      align-items: center
+      margin-bottom: 10px
+      & i
+        font-size: 26px
+        color: #3ca736
+      & p
+        margin-left: 10px
+      &:last-child
+        margin-bottom: 0
+  &__skill
+    &-title
+      font-size: 34px
+      font-weight: 700
+      letter-spacing: 0.1125em
+      margin-top: 25px
+      color: #000
+  &__skill-bar
+    margin-top: 30px
+//END
+
+// Skill Bar
+@keyframes load
+  from 
+    width: 0%
+  
+@-webkit-keyframes load
+  from 
+    width: 0%
+  
+@-moz-keyframes load
+  from 
+    width: 0%
+  
+@-o-keyframes load
+  from 
+    width: 0%
+  
+.bar
+  &__text
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    margin-bottom: 10px
+  &__name
+    font-size: 16px
+    font-weight: 700
+  & .percent
+    font-size: 16px
+    font-weight: 400
+  &__line
+    background-color: #EBEBEB
+    margin-bottom: 30px
+    font-size: 0
+    &::before
+      content:  attr(data-skill)
+      background-color: #333
+      display: inline-block
+      padding: 10px 0 10px 10px
+
+      animation: load 2s 0s
+      -webkit-animation: load 2s 0s
+      -moz-animation: load 2s 0s
+      -o-animation: load 2s 0s
+    &.premiere-pro::before
+      width: calc(90%)
+    &.after-effects::before
+      width: calc(70%)
+    &.photoshop::before
+      width: calc(80%)
+    &.illustrator::before
+      width: calc(70%)
+    &.audition::before
+      width: calc(100%)
+
+.about__skill-bar .skill:last-child .bar__line 
+  margin-bottom: 0
+//END
+
+.line
+  width: 100%
+  border-top: 1px solid #333
+
+// FOOTER
+.footer
+  background-color: #F2F3F4
+  padding: 50px 0
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+  &__title
+    font-size: 14px
+    font-weight: 700
+    letter-spacing: 0.25em
+    position: relative
+    z-index: 1
+    & a
+      color: #FFFAF0
+      text-decoration: none
+  &__socials
+    display: flex
+    background: #FFFAF0
+    padding: 5px
+    border-radius: 5px
+    position: relative
+    z-index: 1
+    & .icon
+      margin: 0 5px
+
+.fa
+  &b
+    font-size: 18px
+  &-youtube
+    color: red
+  &-instagram
+    color: transparent
+    background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)
+    background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)
+    background-clip: text
+    -webkit-background-clip: text

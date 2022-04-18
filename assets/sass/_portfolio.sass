@@ -1,0 +1,133 @@
+// .frame
+//   width: 100%
+//   height: 100%
+//   position: absolute
+
+// iframe
+//   position: absolute
+//   top: 50%
+//   left: 50%
+//   width: 100%
+//   height: 100%
+//   transform: translate(-50%, -50%)
+  
+//   .ytp-watermark .yt-uix-sessionlink
+//     display: none !important
+
+#portfoliopage
+  .header
+    &::after
+      visibility: hidden
+
+  .video-background  
+    background: #000 
+    position: absolute
+    top: 0
+    right: 0  
+    bottom: 0 
+    left: 0
+    // z-index: -99
+  
+  .video-foreground
+    padding-bottom: 56.25% /* 16:9 */
+
+  .video-foreground, 
+  .video-background iframe
+    position: absolute
+    top: -30px
+    left: 0
+    width: 100%
+    height: 100%
+    pointer-events: none
+    opacity: 0.5
+  
+  #content
+    position: relative
+    z-index: 1
+
+  .sub-title
+    font-size: 54px
+    font-weight: 700
+    letter-spacing: 0.5625em
+    bottom: 50px
+    color: #FFFAF0
+    text-align: center
+    position: relative
+    z-index: 200
+
+  //Portfolio
+  .portfolio
+    .menu
+      position: static
+    &__item
+      &-7
+        background: url(/portfolio/assets/images/portfolio/photos/ps-retouch-2.png)
+        background-size: cover
+        background-position-y: center
+      &-8
+        background: url(/portfolio/assets/images/portfolio/screenshots/test_explainer_video_voiceover.png)
+        background-size: cover
+        background-position-y: center
+      &-9
+        background: url(/portfolio/assets/images/portfolio/screenshots/christmas.png)
+        background-size: cover
+        background-position-x: center
+        background-position-y: center
+      &-10
+        background: url(/portfolio/assets/images/portfolio/screenshots/creative_logo_animation.png)
+        background-size: cover
+        background-position-x: center
+        background-position-y: center
+      &-11
+        background: url(/portfolio/assets/images/portfolio/screenshots/book_preview.png)
+        background-size: cover
+        background-position-y: center
+      &-12
+        background: url(/portfolio/images/portfolio/screenshots/yetta-1.png)
+        background-size: cover
+        background-position-x: center
+        background-position-y: center
+      &-13
+        background: url(/portfolio/assets/images/portfolio/screenshots/yetta-2.png)
+        background-size: cover
+        background-position-x: center
+        background-position-y: center
+      &-14
+        background: url(/portfolio/assets/images/portfolio/screenshots/instagram_video_1.png)
+        background-size: cover
+        background-position-x: center
+        // background-position-y: center
+
+  
+
+  // FOOTER
+  .footer
+    background-color: #000
+    // &::after
+    //   content: ' '
+    //   position: absolute
+    //   left: 0
+    //   right: 0
+    //   top: 0
+    //   bottom: 0
+    //   background-color: rgba(0,0,0,0.5)
+    &-wrapper
+      position: inherit
+    &__title
+      position: inherit
+      z-index: inherit
+      & a
+        color: #FFFAF0
+    &__socials
+      display: flex
+      background: #FFFAF0
+      border-radius: 5px
+      padding: 5px 5px
+      position: inherit
+      z-index: inherit
+      & .icon
+        margin: 0 5px
+  .fa
+    &-youtube
+      &::after
+        font-size: 11px
