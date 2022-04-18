@@ -1,0 +1,7 @@
+# Created by http://www.gitignore.io
+
+#Cache
+.vscode/
+.git/
+
+assets/favicon1.ico
