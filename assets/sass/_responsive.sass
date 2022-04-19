@@ -3,15 +3,27 @@
     height: 300% 
     top: -100%
 
-@media (max-aspect-ratio: 16/9)
-  #portfolio .video-foreground 
-    width: 300% 
-    left: -100%
+@media (min-width: 1200px)
+  .col-lg-4
+    width: 33.33333333%
+  .col-lg-6
+    width: 50%
+  .col-lg-12
+    width: 100%
 
 @media (max-width: 1199.98px)
 
   .container
     max-width: 960px
+
+  .col-lg-4
+    flex: 0 0 auto
+    width: 33.33333333%
+  .col-lg-6
+    flex: 0 0 auto
+    width: 50%
+  .col-lg-12
+    width: 100%
 
   .menu
     &-right
@@ -32,3 +44,154 @@
   .footer
     &-wrapper
       margin: 0 25px
+
+// @media (max-width: 1199.98px)
+
+// @media (max-width: 991.98px)
+
+@media (max-width: 767.98px)
+
+  .col-md-6
+    flex: 0 0 auto
+    width: 50%
+
+  .portfolio__item
+    height: 280px
+
+  
+@media (max-width: 575.98px)
+
+  .col-sm-6
+    width: 50%
+
+  .col-xs-12
+    width: 100%
+
+  .logo
+    height: 30px
+    &-link
+      padding: 10px
+
+  #portfoliopage .video-foreground, #portfoliopage .video-background .player
+    top: 0
+    left: -15%
+    width: auto
+
+  .header
+    &__content
+      height: 250px
+      &-inner
+        height: 250px
+    & .menu
+      display: none
+  .bg
+    height: 250px
+
+  .title
+    font-size: 26px
+    line-height: 1.5
+
+  //Portfolio
+
+  .portfolio
+    padding-top: 20px
+    & .menu__list .pad
+      padding: inherit
+    & .menu__link
+      font-size: 8px
+      padding-left: 10px
+      padding-right: 5px
+      
+      -moz-transition: all .5s ease-out
+      -o-transition: all .5s ease-out
+      -webkit-transition: all .5s ease-out
+      transition: all .5s ease-out
+    &__items
+      padding-top: 20px
+      padding-bottom: 20px
+    &__item
+      & .overlay
+        &__title
+          font-size: 14px
+        &__skill
+          &-title
+            font-size: 10px
+          &-list
+            font-size: 10px
+    &__button-link
+      font-size: 8px
+      padding-top: 10px
+      padding-bottom: 10px
+      padding-left: 20px
+      padding-right: 15px
+
+  .overlay__skill-list .overlay__skill-item:nth-child(3n)
+    position: absolute
+    top: 15px
+
+  //About
+  
+  .about
+    padding-top: 40px
+    &__bg
+      display: none
+    &__title
+      font-size: 24px
+    &__description
+      &-1
+        font-size: 16px
+      &-2
+        font-size: 14px
+      &-3
+        font-size: 16px
+    &__skill
+      padding: 0 15px
+      &-title
+        font-size: 24px
+  .bar
+    &__text
+      margin-bottom: 5px
+    &__name
+      font-size: 12px
+      letter-spacing: 1px
+    & .percent
+      font-size: 12px
+    &__line
+      margin-bottom: 15px
+      &::before
+        padding: 5px 0 5px 10px
+
+  .footer
+    padding: 20px 0
+    &__title
+      font-size: 8px
+    & .fab
+      font-size: 14px
+
+  //Portfolio PAGE
+  #portfoliopage 
+    & .title
+      margin-top: 25px
+    & .sub-title
+      font-size: 22px
+      bottom: 20px
+
+@media (max-width: 499.98px)
+
+  .col-sm-12
+    width: 100%
+
+@media (max-width: 385.98px)
+
+  //Background
+  #portfoliopage .video-foreground, #portfoliopage .video-background .player
+    position: absolute
+    top: 0
+    left: -120%
+    height: 100%
+    width: auto
+
+  //Portfolio
+  // .overlay__skill-list .overlay__skill-item:nth-child(3n)
+  //   position: absolute
+  //   top: 15px
