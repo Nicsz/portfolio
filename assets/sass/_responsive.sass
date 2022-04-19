@@ -96,16 +96,22 @@
   .portfolio
     padding-top: 20px
     & .menu__list .pad
-      padding: inherit
+      padding: 0 5px
     & .menu__link
-      font-size: 8px
+      font-size: 0.438rem
       padding-left: 10px
       padding-right: 5px
+
+      border: 1px solid transparent
       
       -moz-transition: all .5s ease-out
       -o-transition: all .5s ease-out
       -webkit-transition: all .5s ease-out
       transition: all .5s ease-out
+      &--active
+        border: 1px solid #333
+      &:hover
+        border: 1px solid #333
     &__items
       padding-top: 20px
       padding-bottom: 20px
@@ -141,7 +147,7 @@
       &-1
         font-size: 16px
       &-2
-        font-size: 14px
+        font-size: 16px
       &-3
         font-size: 16px
     &__skill
