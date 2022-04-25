@@ -1,7 +1,20 @@
+// @mixin tablet-overlay-last-childs
+//   @for $i from 1 through 3
+//     $top: $i * 15
+//     .overlay__skill-list .overlay__skill-item:nth-child(#{$i+1})
+//       position: absolute
+//       top: #{$top}px 
+
+// @mixin phone-overlay-last-childs
+//   .overlay__skill-list .overlay__skill-item:nth-child(3n)
+//     position: absolute
+//     top: 15px
+
 @media (min-aspect-ratio: 16/9)
   #portfolio .video-foreground 
     height: 300% 
     top: -100%
+
 
 @media (min-width: 1200px)
   .col-lg-4
@@ -10,6 +23,19 @@
     width: 50%
   .col-lg-12
     width: 100%
+
+@media (min-width: 1500px)
+  .col-xl-3
+    width: 25%
+
+  //Portfolio
+  .overlay__skill-list .overlay__skill-item:nth-child(3n)
+    position: absolute
+    top: 15px
+
+@media (min-width: 2000px)
+  .col-xxl-2
+    width: 16.66666667%
 
 @media (max-width: 1199.98px)
 
@@ -30,7 +56,6 @@
       &__link
         font-size: 20px
 
-
   .portfolio
     &__item
       .overlay
@@ -49,14 +74,146 @@
 
 // @media (max-width: 991.98px)
 
-@media (max-width: 767.98px)
+@media (max-width: 767.98px) and (min-width: 500px)
 
-  .col-md-6
-    flex: 0 0 auto
-    width: 50%
+  .col-lg-4
+    width: 33.3333% !important
 
-  .portfolio__item
-    height: 280px
+  .about .col-sm-12
+    width: 100%
+
+  #portfoliopage .video-foreground, #portfoliopage .video-background .player
+    top: 0
+    width: auto
+
+  .logo
+    height: 40px
+    &-link
+      padding: 15px
+
+  .header
+    &__content
+      height: 300px
+      &-inner
+        height: 300px
+    & .menu
+      display: none
+  .bg
+    height: 300px
+
+  .title
+    font-size: 36px
+    line-height: 1.5
+  #portfoliopage .sub-title
+    font-size: 36px
+    bottom: 20px
+
+  //Portfolio
+  .portfolio
+    padding-top: 20px
+    & .menu__list .pad
+      padding: 0 5px
+    & .menu__link
+      font-size: 10px
+      outline: none
+      border: 2px solid transparent
+      &--active
+        outline: none
+        border: 2px solid #333
+      &:hover
+        outline: none
+        border: 2px solid #333
+    &__item
+      height: 220px !important
+      &s
+        padding-top: 20px
+        padding-bottom: 20px
+      & .overlay
+        &__title
+          font-size: 14px
+        &__skill
+          &-title
+            font-size: 10px
+          &-list
+            font-size: 10px
+            &s
+              width: 100%
+    & .overlay
+      &__title
+        font-size: 16px
+        text-align: center
+        margin-right: 40px
+        margin-bottom: 30px
+      &__text
+        margin-bottom: 40px
+    &__button-link
+      font-size: 10px !important
+      padding-top: 10px
+      padding-bottom: 10px
+      padding-left: 20px
+      padding-right: 15px
+  
+  .portfolio__item .overlay__icons, .portfolio__item .overlay:hover .overlay__icons
+    align-items: baseline
+    margin-top: 20px
+
+  @for $i from 1 through 3
+    $top: $i * 15
+    .overlay__skill-list .overlay__skill-item:nth-child(#{$i+1})
+      position: absolute
+      top: #{$top}px 
+  
+  //About
+  .about
+    padding-top: 40px
+    &__bg
+      display: none
+    &__title
+      font-size: 24px
+    &__description
+      &-1
+        font-size: 16px
+      &-2
+        font-size: 16px
+      &-3
+        font-size: 16px
+    &__skill
+      padding: 0 15px
+      &-title
+        font-size: 24px
+  .bar
+    &__text
+      margin-bottom: 5px
+    &__name
+      font-size: 12px
+      letter-spacing: 1px
+    & .percent
+      font-size: 12px
+    &__line
+      margin-bottom: 15px
+      &::before
+        padding: 5px 0 5px 10px
+  
+  //Footer
+  .footer
+    padding: 20px 0
+    &__title
+      font-size: 10px
+    & .fab
+      font-size: 16px
+
+  //Portfolio PAGE
+  #portfoliopage
+    & .header
+      &__content
+        height: 320px
+        &-inner
+          height: 320px
+    & .title
+      margin-top: 25px
+    & .sub-title
+      font-size: 22px
+      bottom: 20px
 
   
 @media (max-width: 575.98px)
@@ -79,16 +236,16 @@
 
   .header
     &__content
-      height: 250px
+      height: 220px
       &-inner
-        height: 250px
+        height: 220px
     & .menu
       display: none
   .bg
-    height: 250px
+    height: 220px
 
   .title
-    font-size: 26px
+    font-size: 24px
     line-height: 1.5
 
   //Portfolio
@@ -119,6 +276,7 @@
       padding-top: 20px
       padding-bottom: 20px
     &__item
+      height: 280px
       & .overlay
         &__title
           font-size: 14px
@@ -179,18 +337,45 @@
 
   //Portfolio PAGE
   #portfoliopage 
+    & .header
+      &__content
+        height: 250px !important
+        &-inner
+          height: 250px !important
     & .title
       margin-top: 25px
     & .sub-title
       font-size: 22px
       bottom: 20px
 
-@media (max-width: 499.98px)
+@media (max-width: 499.98px) and (min-width: 386px)
 
-  .col-sm-12
+  .col-sm-6
+    width: 50%
+
+  .portfolio__item
+    height: 220px
+
+  .portfolio__item .overlay__icons, .portfolio__item .overlay:hover .overlay__icons
+    align-items: baseline
+    margin-top: 20px
+
+  .portfolio__item .overlay:hover .overlay__text
+    margin-bottom: 40px
+
+  .portfolio__item .overlay__skill-lists
     width: 100%
 
+  @for $i from 1 through 3
+    $top: $i * 15
+    .overlay__skill-list .overlay__skill-item:nth-child(#{$i+1})
+      position: absolute
+      top: #{$top}px 
+
 @media (max-width: 385.98px)
+
+  .col-xs-12
+    width: 100%
 
   //Background
   #portfoliopage .video-foreground, #portfoliopage .video-background .player
