@@ -78,8 +78,9 @@ body
 .header
   display: block
   // background: url("/assets/images/bg.png")
-  background-size: 100% 100%
-  background-repeat: no-repeat
+  background: #F2F3F4
+  // background-size: 100% 100%
+  // background-repeat: no-repeat
   position: relative
 
   -webkit-transition: all 5s ease-out
@@ -87,18 +88,10 @@ body
   -o-transition: all 5s ease-out
   transition: all 5s ease-out
 
-  &:hover, .header:focus
-    background: url(/portfolio/assets/images/bg.png)
-    background-size: 105% 105%
-    background-position: center
-  &::after
-    content: ' '
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    background-color: rgba(0,0,0,.5)
+  // &:hover, .header:focus
+  //   background: url(/portfolio/assets/images/bg.png)
+  //   background-size: 105% 105%
+  //   background-position: center
   &__content
     height: 500px
     & #home:hover
