@@ -4,4 +4,10 @@
 .vscode/
 .git/
 
-assets/favicon1.ico
+#Files
+assets/favicon1.ico/
+assets/images/old/
+assets/images/portolio/gif/old/
+assets/images/portolio/photos/old/
+assets/images/portolio/screenshots/old/
+assets/videos/old/

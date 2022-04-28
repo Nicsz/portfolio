@@ -1,19 +1,3 @@
-// .frame
-//   width: 100%
-//   height: 100%
-//   position: absolute
-
-// iframe
-//   position: absolute
-//   top: 50%
-//   left: 50%
-//   width: 100%
-//   height: 100%
-//   transform: translate(-50%, -50%)
-  
-//   .ytp-watermark .yt-uix-sessionlink
-//     display: none !important
-
 #portfoliopage
   .header
     &::after
@@ -26,7 +10,6 @@
     right: 0  
     bottom: 0 
     left: 0
-    // z-index: -99
   
   .video-foreground
     padding-bottom: 56.25% /* 16:9 */
@@ -70,57 +53,77 @@
     .menu
       position: static
     &__item
+      &-1
+        background: url(/portfolio/assets/images/portfolio/screenshots/video-clip-1.webp)
+        background-size: cover
+        background-position-x: center
+      &-2
+        background: url(/portfolio/assets/images/portfolio/gif/egypt_warrior.gif)
+        background-size: cover
+      &-3
+        background: url(/portfolio/assets/images/portfolio/screenshots/inst_retro_promo.webp)
+        background-size: cover
+      &-4
+        background: url(/portfolio/assets/images/portfolio/photos/ps-retouch-1.webp)
+        background-size: cover
+        background-position-x: center
+      &-5
+        background: url(/portfolio/assets/images/portfolio/screenshots/creative_logo_animation.webp)
+        background-size: cover      
+        background-position-x: center
+      &-6
+        background: url(/portfolio/assets/images/portfolio/screenshots/dermaviduals.webp)
+        background-size: cover
+        background-position-x: center
       &-7
-        background: url(/portfolio/assets/images/portfolio/photos/ps-retouch-2.png)
+        background: url(/portfolio/assets/images/portfolio/screenshots/wedding-ceremony.webp)
         background-size: cover
         background-position-y: center
       &-8
-        background: url(/portfolio/assets/images/portfolio/screenshots/test_explainer_video_voiceover.png)
+        background: url(/portfolio/assets/images/portfolio/screenshots/test_explainer_video_voiceover.webp)
         background-size: cover
         background-position-y: center
       &-9
-        background: url(/portfolio/assets/images/portfolio/screenshots/christmas.png)
+        background: url(/portfolio/assets/images/portfolio/screenshots/christmas.webp)
         background-size: cover
         background-position-x: center
         background-position-y: center
       &-10
-        background: url(/portfolio/assets/images/portfolio/screenshots/creative_logo_animation.png)
+        background: url(/portfolio/assets/images/portfolio/photos/ps-bg-remove-white.webp)
         background-size: cover
         background-position-x: center
         background-position-y: center
       &-11
-        background: url(/portfolio/assets/images/portfolio/screenshots/book_preview.png)
+        background: url(/portfolio/assets/images/portfolio/screenshots/book_preview.webp)
         background-size: cover
         background-position-y: center
       &-12
-        background: url(/portfolio/assets/images/portfolio/screenshots/yetta-1.png)
+        background: url(/portfolio/assets/images/portfolio/gif/2d_landscape_animate.gif)
         background-size: cover
         background-position-x: center
         background-position-y: center
       &-13
-        background: url(/portfolio/assets/images/portfolio/screenshots/yetta-2.png)
+        background: url(/portfolio/assets/images/portfolio/photos/ps-retouch-2.webp)
         background-size: cover
         background-position-x: center
         background-position-y: center
       &-14
-        background: url(/portfolio/assets/images/portfolio/screenshots/instagram_video_1.png)
+        background: url(/portfolio/assets/images/portfolio/screenshots/yetta-2.webp)
         background-size: cover
         background-position-x: center
-        // background-position-y: center
-
+      &-15
+        background: url(/portfolio/assets/images/portfolio/screenshots/yetta-1.webp)
+        background-size: cover
+        background-position-x: center
+      &-16
+        background: url(/portfolio/assets/images/portfolio/screenshots/instagram_video.webp)
+        background-size: cover
+        background-position-x: center
   
 
   // FOOTER
   .footer
     background-color: #000
-    // &::after
-    //   content: ' '
-    //   position: absolute
-    //   left: 0
-    //   right: 0
-    //   top: 0
-    //   bottom: 0
-    //   background-color: rgba(0,0,0,0.5)
     &-wrapper
       position: inherit
     &__title
