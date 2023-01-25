@@ -9,7 +9,7 @@ body
   // background-color: #000
 
 .bg
-  background: url(/portfolio/assets/images/bg.webp)
+  background: url(/assets/images/bg.webp)
   background-size: 100% 100%
   background-repeat: no-repeat
   position: fixed
@@ -26,7 +26,7 @@ body
   transition: all 5s ease-out
 
   &:hover, .bg:focus
-    background: url(/portfolio/assets/images/bg.webp)
+    background: url(/assets/images/bg.webp)
     background-size: 105% 105%
     background-position: center
   &::after
@@ -159,7 +159,7 @@ body
 // SECTION Portfolio
 .portfolio
   background-color: #F2F3F4
-  padding-top: 50px
+  // padding-top: 50px
   position: relative
   z-index: 2
   & .menu
@@ -202,25 +202,25 @@ body
     height: 380px
     position: relative
     &-1
-      background: url(/portfolio/assets/images/portfolio/screenshots/dermaviduals.webp)
+      background: url(/assets/images/portfolio/screenshots/dermaviduals.webp)
       background-size: cover
       background-position-x: center
     &-2
-      background: url(/portfolio/assets/images/portfolio/screenshots/wedding-ceremony.webp)
-      background-size: cover
-    &-3
-      background: url(/portfolio/assets/images/portfolio/screenshots/inst_retro_promo.webp)
-      background-size: cover
-    &-4
-      background: url(/portfolio/assets/images/portfolio/screenshots/video-clip-1.webp)
-      background-size: cover
-    &-5
-      background: url(/portfolio/assets/images/portfolio/photos/ps-retouch-1.webp)
+      background: url(/assets/images/portfolio/screenshots/bear_logo.webp)
       background-size: cover      
       background-position-x: center
-    &-6
-      background: url(/portfolio/assets/images/portfolio/photos/ps-bg-remove-white.webp)
+    &-3
+      background: url(/assets/images/portfolio/screenshots/inst_retro_promo.webp)
       background-size: cover
+    &-4
+      background: url(/assets/images/portfolio/screenshots/video-clip-1.webp)
+      background-size: cover
+    &-5
+      background: url(/assets/images/portfolio/screenshots/wedding-ceremony.webp)
+      background-size: cover
+    &-6
+      background: url(/assets/images/portfolio/screenshots/bg_icons.webp)
+      background-size: contain
       background-position-y: center
     & .overlay
       position: absolute
@@ -252,6 +252,9 @@ body
         transition: all .5s ease-out
         &-link
           margin: 10px
+          // &:first-child
+          //   & i
+          //     padding: 15px 20px
         & a
           cursor: pointer
         & i
@@ -279,6 +282,14 @@ body
         font-weight: 700
         letter-spacing: 1.2px
         margin-bottom: 20px
+      &__description
+        display: none
+        font-size: 12px
+        font-weight: 700
+        letter-spacing: 1.2px
+        margin-bottom: 20px
+        // &-title
+        // &-text
       &__skill
         display: flex
         &-title
@@ -303,7 +314,6 @@ body
           margin-left: 5px
           &:not(:last-child):after
             content: ','
-        &-list
       &:hover
         background: rgba(0,0,0,0.7)
       &:hover .overlay__icons
@@ -492,7 +502,6 @@ body
     display: flex
     justify-content: space-between
     align-items: center
-
     margin-bottom: 10px
   &__name
     font-size: 16px
@@ -517,13 +526,13 @@ body
     &.premiere-pro::before
       width: calc(90%)
     &.after-effects::before
-      width: calc(70%)
-    &.photoshop::before
       width: calc(80%)
     &.illustrator::before
-      width: calc(70%)
+      width: calc(90%)
+    &.photoshop::before
+      width: calc(80%)
     &.audition::before
-      width: calc(100%)
+      width: calc(70%)
 
 .about__skill-bar .skill:last-child .bar__line 
   margin-bottom: 0
@@ -535,7 +544,7 @@ body
 
 // FOOTER
 .footer
-  background-color: #F2F3F4
+  background-color: #022C38 //#F2F3F4
   padding: 50px 0
   &-wrapper
     display: flex
@@ -576,3 +585,7 @@ body
     background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)
     background-clip: text
     -webkit-background-clip: text
+
+#lz-close
+  height: 25px
+  width: 25px
